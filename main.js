@@ -35,16 +35,57 @@ const lenis = new Lenis({
 
   const tl = gsap.timeline({});
 
-  gsap.to("#services", {
+
+  gsap.from(".service-cta-text-wrapper",{
+    scrollTrigger : {
+      trigger:".brand-desc",
+      start:"top top",
+      markers:false,
+      scrub:true,
+      end:"=+400px"
+    },
+    opacity:0,
+    y:150,
+    duration:1,
+  })
+
+  const tweenanim = gsap.to("#services", {
     scrollTrigger : {
         trigger: "#services",
-        markers:true,
+        markers:false,
         start: "top top",
-        end:"+=2000px",
+        end:"+=4000px",
         pin:true,
         markers:false,
         scrub:true
     },
-    xPercent: -100,
-    ease: "sine.inOut",
-  });
+    xPercent: -200,
+    ease: "none",
+    delay:2
+  })
+
+  gsap.to("body",{
+    scrollTrigger: {
+      containerAnimation:tweenanim,
+      trigger:".services-body",
+      start:"left center",
+      toggleActions:"play none none reverse"
+    },
+    backgroundColor:"#fff",
+    color:"#000"
+  })
+  
+
+
+  gsap.to(".service-image-wrapper",{
+    scrollTrigger:{
+      containerAnimation:tweenanim,
+      trigger:".service-image-wrapper",
+      start:"300px center",
+      toggleActions:"play none none reverse"
+    },
+    className:"service-image-wrapper-full",
+    ease:"none",
+  })
+  
+ 
