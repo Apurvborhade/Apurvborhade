@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}  
+header {
+    width: 100%;
+} 
+.header-wrapper {
+    width: 96%;
+}
+.banner-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.banner-overlay {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    opacity: 60%;
+}
+.action-btn {
+    min-width: 200px;
+}
+.banner-overlay-wrapper-text span {
+    width: 1610px;
+}
+
+.cta-text {
+    min-height: 400px;
+
+}
+.curve-vector {
+    width: 1200px;
+    min-height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10rem;
+    border: 1px solid #fff4;
+}
+.services-landing-wrapper {
+    min-height: 100vh;
+}
+.curve-vector::before {
+    content: "";
+    width: 1200px;
+    min-height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    left: -51px;
+    border: 1px solid #fff4;
+}
+.service-section,.services-body,.section-process,.process-roadmap-wrapper {
+    min-height: 100vh;
+}
+.layout-circle {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 1px solid #fff3;
+    top: -140%;
+    left: -3%;
+}
+.layout-circle::before {
+    content: "";
+    position: absolute;
+    min-width: 700px;
+    min-height: 700px;
+    border-radius: 50%;
+    border: 1px solid #fff3;
+    left: 1%;
+}
+.layout-circle::after {
+    content: "";
+    position: absolute;
+    min-width: 700px;
+    min-height: 700px;
+    border-radius: 50%;
+    border: 1px solid #fff3;
+    left: -2%;
+}
+.services-landing-wrapper,.services-body {
+    min-width: 100vw;
+}
+
+.focus {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.focus::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border:1px solid #fff4;
+    border-radius: 50%;
+    animation: radar 3s infinite;
+}
+@keyframes radar {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        padding: 50px;
+        opacity: 0;
+    }
+}
+.vector-bar {
+    width: 70px;
+    height: 1px;
+    background: #fff7;
+    position: absolute;
+    rotate: -35deg;
+}
+.vector-bar::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    transform: translateY(-20px) translateX(64px);
+    background: #fff7;
+    position: absolute;
+    rotate: 35deg;
+}
+.rotu {
+    transform: rotateY(180deg);
+}
