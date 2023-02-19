@@ -1,0 +1,33 @@
+@media only screen and (max-width: 600px) {
+    .layout-circle {
+        width: 250px;
+        height: 250px;
+        left: 3%;
+    }
+    .layout-circle::before {
+        content: "";
+        position: absolute;
+        min-width: 250px;
+        min-height: 250px;
+        border-radius: 50%;
+        border: 1px solid #fff3;
+        left: 1%;
+    }
+    .layout-circle::after {
+        content: "";
+        position: absolute;
+        min-width: 250px;
+        min-height: 250px;
+        border-radius: 50%;
+        border: 1px solid #fff3;
+        left: 1%;
+    }
+    .services-body {
+        min-width: 100vw;
+    }
+    .service-image-wrapper {
+        height: 70vh;
+        width: 90vw;
+        transition: all 1s ease;
+    }
+}

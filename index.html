@@ -7,6 +7,7 @@
     <title>Imersive | FUTURE OF WEB3</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -15,7 +16,7 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="absolute z-10 flex justify-center mt-10 ">
+        <header class="absolute z-10 flex justify-center mt-10 overflow-hidden ">
             <div class="flex header-wrapper justify-between border border-white/[.2] rounded-tl-3xl rounded-br-3xl">
                 <div class="logo-container px-10 py-3 rounded-tl-3xl ">
                     <span class="z-10">
@@ -60,29 +61,31 @@
             </div>
         </div>
 
-        <section class="service-section border-t border-white/[.2] flex" id="services">
-            <div class="services-landing-wrapper flex justify-between flex-col items-center">
-                <div class="service-title w-full mt-5 mr-16">
+        <section class="service-section border-t border-white/[.2] flex lg:flex-row flex-col" id="services">
+            <div class="services-landing-wrapper flex justify-between flex-col items-center p-5 lg:p-0">
+                <div class="service-title w-full mt-5 lg:mr-16">
                     <p class="text-end test-text">{what we do}</p>
                 </div>
                 <div class="services-tagline-wrapper flex flex-col relative">
                     <div class="layout-circle absolute"></div>
                     <div class="overflow-hidden">
                         <div class="service-cta-text-wrapper">
-                            <span class="lg:text-9xl text-3xl uppercase" id="service-cta-text">EMPOWERING BRANDS</span>
+                            <span class="lg:text-9xl text-2xl uppercase" id="service-cta-text">EMPOWERING BRANDS</span>
                         </div>
                     </div>
                     <div class="ml-auto overflow-hidden">
                         <div class="ml-auto service-cta-text-wrapper">
-                            <span class="lg:text-7xl text-2xl uppercase ">with great cx</span>
+                            <span class="lg:text-7xl text-xl uppercase ">with great cx</span>
                         </div>
                     </div>
                 </div>
                 <div class="services-desc mb-5">
-                    With our expertise and top-of-the-line technology, businesses can enjoy a competitive edge and stay relevant in the evolving digital landscape.
+                    <p class="text-center">
+                        With our expertise and top-of-the-line technology, businesses can enjoy a competitive edge and stay relevant in the evolving digital landscape.
+                    </p>
                 </div>
             </div>
-            <div class="services-body flex justify-center items-center gap-12">
+            <div class="services-body lg:flex-row flex-col flex justify-center items-center gap-12">
                 <div class="service-wrapper relative">
                     <div class="service-title-overlay">
                         <p class="text-2xl">BLOCK-CHAIN SOLUTIONS</p>
@@ -92,7 +95,7 @@
                             <img src="./assets/service.png" alt="" id="service-image">
                         </div>
                         <div class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
-                            <p class="w-96">
+                            <p class="service-desc">
                                 Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms that deliver unparalleled security and transparency, allowing our clients to unlock new business potential and drive growth.
                             </p>
                         </div>
@@ -107,7 +110,7 @@
                             <img src="./assets/service.png" alt="" id="service-image">
                         </div>
                         <div class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
-                            <p class="w-96">
+                            <p class="service-desc">
                                 Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms that deliver unparalleled security and transparency, allowing our clients to unlock new business potential and drive growth.
                             </p>
                         </div>
@@ -122,7 +125,7 @@
                             <img src="./assets/service.png" alt="" id="service-image">
                         </div>
                         <div class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
-                            <p class="w-96">
+                            <p class="service-desc">
                                 Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms that deliver unparalleled security and transparency, allowing our clients to unlock new business potential and drive growth.
                             </p>
                         </div>
@@ -136,7 +139,11 @@
                 <div class="roadmap-title">
                     <p class="uppercase text-3xl">ENJOY OUR PROCESS</p>
                 </div>
-                
+                <div class="vertical-bars absolute mt-16 flex w-full h-full justify-around border-t">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
                 <div class="roadmap mt-52">
                     <div class="roadmap-phase relative">
                         <div class="phase-title absolute -top-12 left-20 flex">

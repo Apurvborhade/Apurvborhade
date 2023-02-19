@@ -23,7 +23,47 @@ const lenis = new Lenis({
   requestAnimationFrame(raf)
   
 
-
+  let tweenanim;
+  
+  if(window.screen.width > 800) {
+    // SERVICE LANDING HORIZONTAL SCROLL
+    tweenanim = gsap.to("#services", {
+      scrollTrigger : {
+          trigger: "#services",
+          markers:false,
+          start: "top top",
+          end:"+=4000px",
+          pin:true,
+          markers:false,
+          scrub:true
+      },
+      xPercent: -200,
+      ease: "none",
+      delay:2
+    })
+  
+  gsap.to("body",{
+    scrollTrigger: {
+      containerAnimation:tweenanim,
+      trigger:".services-body",
+      start:"left center",
+      markers:true,
+      toggleActions:"play none none reverse"
+    },
+    backgroundColor:"#fff",
+    color:"#000"
+  })
+  gsap.to(".service-image-wrapper",{
+    scrollTrigger:{
+      containerAnimation:tweenanim,
+      trigger:".service-image-wrapper",
+      start:"300px center",
+      toggleActions:"play none none reverse"
+    },
+    className:"service-image-wrapper-full",
+    ease:"none",
+  })
+  }
 
 
 
@@ -36,11 +76,12 @@ const lenis = new Lenis({
   const tl = gsap.timeline({});
 
 
+  // TEXT REVEAL ANIM
   gsap.from(".service-cta-text-wrapper",{
     scrollTrigger : {
       trigger:".brand-desc",
       start:"top top",
-      markers:false,
+      markers:true,
       scrub:true,
       end:"=+400px"
     },
@@ -48,44 +89,6 @@ const lenis = new Lenis({
     y:150,
     duration:1,
   })
-
-  const tweenanim = gsap.to("#services", {
-    scrollTrigger : {
-        trigger: "#services",
-        markers:false,
-        start: "top top",
-        end:"+=4000px",
-        pin:true,
-        markers:false,
-        scrub:true
-    },
-    xPercent: -200,
-    ease: "none",
-    delay:2
-  })
-
-  gsap.to("body",{
-    scrollTrigger: {
-      containerAnimation:tweenanim,
-      trigger:".services-body",
-      start:"left center",
-      toggleActions:"play none none reverse"
-    },
-    backgroundColor:"#fff",
-    color:"#000"
-  })
   
-
-
-  gsap.to(".service-image-wrapper",{
-    scrollTrigger:{
-      containerAnimation:tweenanim,
-      trigger:".service-image-wrapper",
-      start:"300px center",
-      toggleActions:"play none none reverse"
-    },
-    className:"service-image-wrapper-full",
-    ease:"none",
-  })
   
- 
+  
