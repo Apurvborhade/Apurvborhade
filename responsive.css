@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .layout-circle {
         width: 250px;
         height: 250px;
@@ -24,10 +24,21 @@
     }
     .services-body {
         min-width: 100vw;
+        padding: 1.2rem;
     }
     .service-image-wrapper {
         height: 70vh;
-        width: 90vw;
+        width: 100%;
         transition: all 1s ease;
+    }
+    .service-desc {
+        width: 20rem;
+    }
+    .service-image-wrapper img {
+        width: 0%;
+    }
+    .services-tagline {
+        width: 20rem;
+        font-size: 1rem;
     }
 }
