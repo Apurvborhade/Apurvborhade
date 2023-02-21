@@ -12,7 +12,7 @@ const lenis = new Lenis({
 
 //get scroll value
 lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-  console.log({ scroll, limit, velocity, direction, progress })
+  // console.log({ scroll, limit, velocity, direction, progress })
 })
 
 function raf(time) {
@@ -54,6 +54,8 @@ if (window.screen.width > 800) {
     backgroundColor: "#fff",
     color: "#000"
   })
+
+
   gsap.to(".service-image-wrapper", {
     scrollTrigger: {
       containerAnimation: tweenanim,
@@ -72,7 +74,7 @@ if (window.screen.width < 800) {
     scrollTrigger: {
       trigger: ".services-body",
       start: "top center",
-      markers:true,
+      markers: true,
       toggleActions: "play none none reverse"
     },
     backgroundColor: "#fff",
@@ -80,44 +82,44 @@ if (window.screen.width < 800) {
   })
 }
 
-const workImages = document.querySelectorAll(".service-image-wrapper img");
+const serviceImages = document.querySelectorAll(".service-image-wrapper img");
 const serviceDesc = document.querySelectorAll(".service-desc");
 
-workImages.forEach((image) => {
+serviceImages.forEach((image) => {
   const overlayText = image.parentElement.parentElement.querySelector(".service-desc");
   const overlay = image.parentElement.parentElement.querySelector(".service-desc-overlay");
 
   gsap.to(image, {
-    scrollTrigger:{
-      trigger:image,
-      
-      start:"+=100px center",
-  
+    scrollTrigger: {
+      trigger: image,
+
+      start: "+=100px center",
+
     },
     css: { width: "100%" },
-    duration:1
+    duration: 1
   })
   gsap.from(overlayText, {
-    scrollTrigger:{
-      trigger:image,
-      
-      start:"+=100px center",
-  
+    scrollTrigger: {
+      trigger: image,
+
+      start: "+=100px center",
+
     },
-    opacity:0,
-    duration:1,
-    delay:0.4,
+    opacity: 0,
+    duration: 1,
+    delay: 0.4,
   })
   gsap.from(overlay, {
-    scrollTrigger:{
-      trigger:image,
-      
-      start:"+=100px center",
-  
+    scrollTrigger: {
+      trigger: image,
+
+      start: "+=100px center",
+
     },
-    opacity:0,
-    duration:1,
-    delay:0.7,
+    opacity: 0,
+    duration: 1,
+    delay: 0.7,
   })
 })
 
@@ -130,9 +132,10 @@ workImages.forEach((image) => {
 // TEXT REVEAL ANIM
 gsap.from(".service-cta-text-wrapper", {
   scrollTrigger: {
-    trigger: ".brand-desc",
-    start: "top top",
+    trigger: ".service-section",
+    start: "-=100px center",
     scrub: false,
+    markers:false,
     toggleActions: "play none none none"
   },
   opacity: 0,
@@ -140,10 +143,48 @@ gsap.from(".service-cta-text-wrapper", {
   duration: 1,
   rotation: 45, transformOrigin: "left 100%"
 })
+// gsap.to(".works-body-wrapper", {
+//   scrollTrigger: {
+//     trigger: ".works-header",
+//     start: "+=50px +=100px",
+//     end: "+=4000px",
+//     scrub: true,
+//     pin: ".works-wrapper",
+//     markers: false,
+//   },
+//   xPercent: -100,
+// })
 
 
 
+const workImages = document.querySelectorAll(".works-images");
 
+workImages.forEach((image) => {
+  const overlayText = image.parentElement.parentElement.querySelector(".service-desc");
+  const overlay = image.parentElement.parentElement.querySelector(".service-desc-overlay");
+  const Imagecontainer = image.parentElement
+
+  gsap.to(Imagecontainer, {
+    scrollTrigger: {
+      trigger: ".works-body-wrapper",
+      start: "top center",
+      markers: false,
+    },
+    className: ".work-media-wrapper-active",
+    duration: 1
+  })
+  gsap.to(image, {
+    scrollTrigger: {
+      trigger: ".works-body-wrapper",
+
+      start: "top center",
+
+    },
+    className: ".image-active",
+    duration: 1,
+  })
+
+})
 
 // const memberCardImage = document.querySelector(".member-image-wrapper img");
 // const cardOverlay = document.querySelector(".card-overlay");
@@ -155,3 +196,26 @@ gsap.from(".service-cta-text-wrapper", {
 //   cardOverlay.style.top = e.clientY + "px"
 // })
 
+// window.addEventListener("load",() => {
+//   document.getElementById("landing-video").play();
+// })
+
+document.querySelectorAll(".bubble-btn").forEach((btn) => {
+  btn.addEventListener("mousemove",(e) => {
+    
+    var rect = btn.getBoundingClientRect();
+    var x = (e.clientX - rect.left)/10;
+    var y = (e.clientY  - rect.top)/10;
+    
+    
+  
+    btn.firstElementChild.style.transform = `translate3d(${x}px,${y}px,0px)`
+    btn.style.transform = `translate3d(${x}px,${y}px,0px)`
+  })
+  
+  btn.addEventListener("mouseleave",() => {
+    
+    btn.firstElementChild.style.transform = `translate3d(${0}px,${0}px,0px)`
+    btn.style.transform = `translate3d(${0}px,${0}px,0px)`
+  })
+})

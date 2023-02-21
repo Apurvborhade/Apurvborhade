@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,51 +14,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
+
 <body>
     <div class="page-wrapper">
-        <header class="absolute z-10 flex justify-center mt-10 overflow-hidden ">
-            <div class="flex header-wrapper justify-between border border-white/[.2] rounded-tl-3xl rounded-br-3xl">
-                <div class="logo-container px-10 py-3 rounded-tl-3xl ">
-                    <span class="z-10">
-                        <a href="/">
-                            <img src="./assets/logo.png" alt="" >
-                        </a>
-                    </span>
+        <div class="landing flex flex-col">
+            <header class="relative w-full ">
+                <div class="header-wrapper flex justify-between px-1">
+                    <div class="logo-container p-3">
+                        <img src="./assets/logo.png" alt="" width="60px">
+                    </div>
+                    <button class="menu-btn border-l border-white/[0.3] px-10">
+                        MENU
+                    </button>
                 </div>
-                <div class="header-action-btns flex items-center">
-                    <div class="social-btn-twitter action-btn border-l border-white/[.2] p-5 h-full flex items-center justify-center">
-                        <a href="">
-                            <img src="./assets/discord.png" alt="">
-                        </a>
-                    </div>
-                    <div class="social-btn-discord action-btn flex items-center justify-center border-l border-white/[.2] p-5 h-full">
-                        <a href="">
-                            <img src="./assets/discord.png" alt="">
-                        </a>
-                    </div>
-                    <div class="contact-btn text-white action-btn uppercase flex items-center justify-center  border-l border-white/[.2] p-5 h-full">
-                        <span>
-                            <a href="">Get in touch</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="image-banner">
-            <div class="image-container-bg">
-                <div class="banner-overlay absolute top-0"></div>
-                <img src="./assets/banner.png" alt="" class="banner-img">
-            </div>
+            </header>
             
-        </div>
-
-        <div class="cta-text p-20 h-full relative overflow-hidden flex justify-center">
-            <div class="curve-vector"></div>
-            <div class="text-wrapper">
-                <p class="text-center brand-desc">We help you navigate new frontiers in customer engagement. At Immerse, we build immersive virtual experiences that connect with audiences that matter the most to your business.</p>
+            <div class="landing-body h-full flex py-10 flex-col flex-1 justify-around">
+                <div class="flex justify-center">
+                    <h1 class="text-center lg:text-9xl text-3xl landing-brand-text">IMERSIVE</h1>
+                </div>
+                <div class="flex justify-center">
+                    <div class="landing-video-bg p-10">
+                        <div class="bubble-btns lg:block hidden relative">
+                            <div class="bubble-btn text-lg absolute text-center">
+                               <p class="bubble-text"> FUTURE READY CX</p>
+                            </div>
+                            <div class="bubble-btn text-lg absolute text-center">
+                                <p class="bubble-text"> FUTURE READY CX</p>
+                            </div>
+                            <div class="bubble-btn text-lg absolute text-center">
+                                <p class="bubble-text"> FUTURE READY CX</p>
+                            </div>
+                        </div>
+                        <!-- <img src="./assets/Final Output V2_Moment.jpg" alt=""> -->
+                        <video src="./assets/Final Output V2.mp4" autoplay muted id="landing-video"></video>
+                    </div>
+                </div>
+                <p class="landing-brand-desc text-lg lg:ml-20 text-center lg:text-left px-10 lg:px-0 ">We help you navigate new frontiers in customer engagement. At Immerse, we build immersive virtual experiences that connect with audiences that matter the most to your business.</p>
             </div>
-        </div>
+        </div>  
 
         <section class="service-section border-t border-white/[.2] flex lg:flex-row flex-col" id="services">
             <div class="services-landing-wrapper flex justify-between flex-col relative items-center p-5 lg:p-0">
@@ -78,8 +75,10 @@
                     </div>
                 </div>
                 <div class="services-desc mb-5 ">
-                    <p class="services-tagline text-right absolute lg:bottom-32 lg:right-32 right-10 text-xl bottom-16 ">
-                        With our expertise and top-of-the-line technology, businesses can enjoy a competitive edge and stay relevant in the evolving digital landscape.
+                    <p
+                        class="services-tagline text-right absolute lg:bottom-32 lg:right-32 right-10 text-xl bottom-16 ">
+                        With our expertise and top-of-the-line technology, businesses can enjoy a competitive edge and
+                        stay relevant in the evolving digital landscape.
                     </p>
                 </div>
             </div>
@@ -90,41 +89,46 @@
                     </div>
                     <div class="relative">
                         <div class="service-image-wrapper">
-                            <img src="./assets/service.png" alt="" id="service-image">
+                            <img src="https://images.unsplash.com/photo-1666816943035-15c29931e975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="" id="service-image">
                         </div>
-                        <div class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
+                        <div
+                            class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
                             <p class="service-desc lg:text-lg text-sm">
-                                Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms that deliver unparalleled security and transparency, allowing our clients to unlock new business potential and drive growth.
+                                Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms
+                                that deliver unparalleled security and transparency, allowing our clients to unlock new
+                                business potential and drive growth.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="service-wrapper relative">
                     <div class="service-title-overlay">
-                        <p class="lg:text-2xl mb-3 text-sm">BLOCK-CHAIN SOLUTIONS</p>
+                        <p class="lg:text-2xl mb-3 text-sm">Augmented Reality + Social AR</p>
                     </div>
                     <div class="relative">
                         <div class="service-image-wrapper">
-                            <img src="./assets/service.png" alt="" id="service-image">
+                            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80" alt="" id="service-image">
                         </div>
-                        <div class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
+                        <div
+                            class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
                             <p class="service-desc lg:text-lg text-sm">
-                                Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms that deliver unparalleled security and transparency, allowing our clients to unlock new business potential and drive growth.
+                                Imersive's Augmented Reality and Social AR solutions provide innovative ways to boost brand engagement and create dynamic, interactive experiences that captivate audiences.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="service-wrapper relative">
                     <div class="service-title-overlay">
-                        <p class="lg:text-2xl mb-3 text-sm">BLOCK-CHAIN SOLUTIONS</p>
+                        <p class="lg:text-2xl mb-3 text-sm">Smart Contract  Development</p>
                     </div>
                     <div class="relative">
                         <div class="service-image-wrapper">
-                            <img src="./assets/service.png" alt="" id="service-image">
+                            <img src="https://images.unsplash.com/photo-1673427147403-9e87c4fe8a26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80" alt="" id="service-image">
                         </div>
-                        <div class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
+                        <div
+                            class="service-desc-overlay absolute text-white text-center w-full h-full flex justify-center items-center top-0 bg-black/[.5]">
                             <p class="service-desc lg:text-lg text-sm">
-                                Our blockchain solutions at Imersive provide state-of-the-art decentralized platforms that deliver unparalleled security and transparency, allowing our clients to unlock new business potential and drive growth.
+                                Our smart contract development services at Imersive offer reliable and automated solutions for streamlining business processes and facilitating trust in digital transactions.
                             </p>
                         </div>
                     </div>
@@ -145,10 +149,13 @@
                 <div class="roadmap mt-52">
                     <div class="roadmap-phase relative">
                         <div class="phase-title absolute -top-12 left-20 flex">
-                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore! Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in architecto.</p>
+                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block">Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore!
+                                Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in
+                                architecto.</p>
                             <p class="w-32">PHASE 1</p>
                         </div>
-                        
+
                         <div class="phase-btn">
                             <div class="vector-bar">
                             </div>
@@ -160,9 +167,12 @@
                     <div class="roadmap-phase relative">
                         <div class="phase-title absolute -top-12 left-12 flex">
                             <p class="w-32 rotu">PHASE 1</p>
-                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block rotu">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore! Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in architecto.</p>
+                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block rotu">Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore!
+                                Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in
+                                architecto.</p>
                         </div>
-                        
+
                         <div class="phase-btn">
                             <div class="vector-bar">
                             </div>
@@ -173,10 +183,13 @@
                 <div class="roadmap mt-52">
                     <div class="roadmap-phase relative">
                         <div class="phase-title absolute -top-12 left-20 flex">
-                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore! Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in architecto.</p>
+                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block">Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore!
+                                Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in
+                                architecto.</p>
                             <p class="w-32">PHASE 1</p>
                         </div>
-                        
+
                         <div class="phase-btn">
                             <div class="vector-bar">
                             </div>
@@ -188,9 +201,12 @@
                     <div class="roadmap-phase relative">
                         <div class="phase-title absolute -top-12 left-12 flex">
                             <p class="w-32 rotu">PHASE 1</p>
-                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block rotu">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore! Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in architecto.</p>
+                            <p class="text-sm text-black/[.3] w-96 absolute -top-10 left-32 hidden lg:block rotu">Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit cum maiores tempore!
+                                Voluptate ullam odit repudiandae ducimus eos velit qui. Adipisci velit porro in
+                                architecto.</p>
                         </div>
-                        
+
                         <div class="phase-btn">
                             <div class="vector-bar">
                             </div>
@@ -201,8 +217,8 @@
             </div>
 
         </section>
-        
-        <section class="team-wrapper relative mt-52 lg:px-10">
+
+        <section class="team-wrapper relative mt-52 lg:px-52 px-10 py-10">
             <div class="team-section-header">
                 <div class="heading">
                     <p class="section-title">OUR PEOPLE</p>
@@ -212,8 +228,56 @@
                     </a>
                 </div>
 
-                <div class="team-members-wrapper my-10">
-                    <div class="member-card relative">
+                <div class="team-members-wrapper my-10 grid lg:grid-cols-6 grid-cols-2 gap-5">
+                    <div class="member-card card-lg relative col-span-2">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-lg relative col-span-2">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-lg relative col-span-2">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-sm relative">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-sm relative">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-sm relative">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-sm relative">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-sm relative">
+                        <div class="card-overlay z-10 bg-white">Hey</div>
+                        <div class="member-image-wrapper relative overflow-hidden rounded-lg">
+                            <img src="./assets/nft.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="member-card card-sm relative">
                         <div class="card-overlay z-10 bg-white">Hey</div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
@@ -222,10 +286,40 @@
                 </div>
             </div>
         </section>
+
+        <footer class="flex flex-col -z-10 border border-t">
+            <div class="footer-cta flex-1">
+                <h2 class="lg:text-8xl text-3xl mb-5">Ready to work with us?</h2>
+                <p class="lg:text-2xl text-xl">hello@imersive.co</p>
+            </div>
+
+            <div class="footer-navigation px-10 ">
+                <div class="socials flex justify-end pb-5">
+                    <div class="flex gap-2">
+                        <div class="instagram social-btn border border-black/[.2] p-4 rounded-full">
+                            <img src="./assets/discord.png"  alt="" width="30px" height="30px">
+                        </div>
+                        <div class="instagram social-btn border border-black/[.2] p-4 rounded-full">
+                            <img src="./assets/discord.png" alt="" width="30px" height="30px">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="navigation-links border-t border-black/[.2]">
+                    <ul class="flex py-10 justify-center ">
+                        <li class="mx-4"><a href="" class="footer-links">Home</a></li>
+                        <li class="mx-4"><a href="" class="footer-links">Home</a></li>
+                        <li class="mx-4"><a href="" class="footer-links">Home</a></li>
+                        <li class="mx-4"><a href="" class="footer-links">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>
