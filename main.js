@@ -22,6 +22,21 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.transform = `translate(${e.clientX - 30}px, ${e.clientY - 30}px)`;
+});
+
+document.addEventListener("click", () => {
+  cursor.classList.add("cursor-click");
+
+  setTimeout(() => {
+    cursor.classList.remove("cursor-click");
+  }, 100);
+});
+
+
 //   GSAP
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,7 +150,7 @@ gsap.from(".service-cta-text-wrapper", {
     trigger: ".service-section",
     start: "-=100px center",
     scrub: false,
-    markers:false,
+    markers: false,
     toggleActions: "play none none none"
   },
   opacity: 0,
@@ -201,21 +216,95 @@ workImages.forEach((image) => {
 // })
 
 document.querySelectorAll(".bubble-btn").forEach((btn) => {
-  btn.addEventListener("mousemove",(e) => {
-    
+  btn.addEventListener("mousemove", (e) => {
+
     var rect = btn.getBoundingClientRect();
-    var x = (e.clientX - rect.left)/10;
-    var y = (e.clientY  - rect.top)/10;
-    
-    
-  
+    var x = (e.clientX - rect.left) / 10;
+    var y = (e.clientY - rect.top) / 10;
+
+
+
     btn.firstElementChild.style.transform = `translate3d(${x}px,${y}px,0px)`
     btn.style.transform = `translate3d(${x}px,${y}px,0px)`
   })
-  
-  btn.addEventListener("mouseleave",() => {
-    
+
+  btn.addEventListener("mouseleave", () => {
+
     btn.firstElementChild.style.transform = `translate3d(${0}px,${0}px,0px)`
     btn.style.transform = `translate3d(${0}px,${0}px,0px)`
   })
 })
+
+
+const memberName = document.querySelector(".team-member-dets");
+const memberCards = document.querySelectorAll(".member-card");
+
+memberCards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    memberName.style.display = "block";
+    var x = e.clientX;
+    var y = e.clientY;
+    memberName.style.left = x + "px";
+    memberName.style.top = y + "px";
+
+    memberName.firstElementChild.innerHTML = card.dataset.content
+  });
+
+  card.addEventListener("mouseleave", (e) => {
+    memberName.style.display = "none";
+  });
+})
+
+
+const menuBtn = document.querySelector(".menu-btn");
+const menCloseBtn = document.querySelector(".close-btn-menu");
+const menu = document.querySelector(".menu-wrapper");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.add("active")
+  gsap.from(".menu-link div", {
+    y: -200,
+    opacity: 0,
+    duration: 1,
+    delay: .1,
+    stagger: 0.4
+  })
+})
+menCloseBtn.addEventListener("click", () => {
+  menu.classList.remove("active")
+})
+
+
+
+const menuLink = document.querySelectorAll(".menu-link");
+
+menuLink.forEach((link) => {
+  console.log(link.dataset.scroll)
+  link.addEventListener("click", () => {
+    menu.classList.remove("active")
+    gsap.to(window, { duration: 2, scrollTo:link.dataset.scroll,ease:"Power1.easeOut"})
+  })
+  link.addEventListener("mouseenter", () => {
+    gsap.to(link.firstElementChild, {
+      yPercent: -50
+    })
+  })
+  link.addEventListener("mouseleave", () => {
+    gsap.to(link.firstElementChild, {
+      yPercent: 0
+    })
+  })
+})
+
+
+// SERVICES CURSOR
+
+const serviceWrapper = document.querySelector(".services-body")
+  serviceWrapper.addEventListener("mousemove",() => {
+    cursor.classList.add("service")
+    cursor.innerHTML = "SERVICES"
+  })
+  serviceWrapper.addEventListener("mouseleave",() => {
+    cursor.classList.remove("service")
+    cursor.innerHTML = ""
+  })

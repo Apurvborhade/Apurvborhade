@@ -1,4 +1,10 @@
 @media only screen and (max-width: 800px) {
+    * {
+        cursor: default;
+    }
+    .cursor {
+        display: none;
+    }
     .layout-circle {
         width: 250px;
         height: 250px;

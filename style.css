@@ -3,12 +3,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
 * {
     font-family: 'Orbitron', sans-serif;
+    cursor: none;
 }
 
+button {
+    cursor: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 body {
     background: #000;
     color: #fff;
     overflow-x: hidden;
+
     width: 100vw;
     position: absolute;
     /* transition: all 0.45s ease; */
@@ -17,6 +33,7 @@ body {
 header {
     border-bottom: 1px solid #fff3;
 }
+
 /* LANDING */
 .landing {
     min-height: 100vh;
@@ -28,7 +45,7 @@ header {
 .landing-brand-text {
     letter-spacing: 6rem;
     display: inline-block;
-    width: 70%;
+    width: 1383px
 }
 .bubble-btn {
     display: flex;
@@ -41,7 +58,6 @@ header {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #FFFFFF;
     backdrop-filter: blur(3px);
-    cursor: pointer;
     transition: all 0.4s ease;
 }
 .bubble-btn p {
@@ -231,7 +247,16 @@ header {
 
 
 /* TEAM MEMBERS */
-
+.team-member-dets {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
 .member-image-wrapper,.member-card {
     width: 100%;
 }
@@ -253,10 +278,21 @@ header {
 
 .card-overlay {
     position: absolute;
-    right: 0;
-    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #0007;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
-
+.card-overlay:hover {
+    opacity: 1;
+}
+.card-overlay p{
+    
+    font-family: "Karla";
+}
 /* WORKS */
 
 /* Footer */
@@ -277,4 +313,7 @@ footer {
 .footer-cta h2,.footer-cta p {
     font-family: "poppins";
 }
+
+
+
 

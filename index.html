@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./responsive.css">
+    <link rel="stylesheet" href="./components.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -18,6 +19,40 @@
 </head>
 
 <body>
+    <div class="cursor"></div>
+    <div class="menu-wrapper">
+        <div class="close-btn flex justify-between">
+            <h1 class="text-3xl p-10">IMERSIVE</h1>
+            <button class="close-btn-menu lg:p-10">CLOSE</button>
+        </div>
+
+        <div class="menu-body grid grid-cols-1 h-full">
+            
+            <div class="menu-navigation flex flex-col justify-around h-full">
+                <ul class="lg:text-9xl text-2xl flex flex-col lg:gap-16 lg:flex-1 px-16 lg:p-32">
+                    <li class="menu-link" data-scroll="#about">
+                        <div class="flex flex-col gap-10 ">
+                            <a class="text-center">ABOUT</a>
+                            <a class="text-center">ABOUT</a>
+                        </div>
+                    </li>
+                    <li class="menu-link" data-scroll="#footer">
+                        <div class="flex flex-col gap-10">
+                            <a class="text-center">CONTACT</a>
+                            <a class="text-center">CONTACT</a>
+                        </div>
+                    </li>
+                    <li class="menu-link" data-scroll="#about">
+                        <div class="flex flex-col gap-10">
+                            <a class="text-center">PROJECTS</a>
+                            <a class="text-center">PROJECTS</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="page-wrapper">
         <div class="landing flex flex-col">
             <header class="relative w-full ">
@@ -25,7 +60,7 @@
                     <div class="logo-container p-3">
                         <img src="./assets/logo.png" alt="" width="60px">
                     </div>
-                    <button class="menu-btn border-l border-white/[0.3] px-10">
+                    <button class="menu-btn slide-button border-l border-white/[0.3] px-10">
                         MENU
                     </button>
                 </div>
@@ -87,7 +122,7 @@
                     <div class="service-title-overlay">
                         <p class="lg:text-2xl mb-3 text-sm">BLOCK-CHAIN SOLUTIONS</p>
                     </div>
-                    <div class="relative">
+                    <div class="relative service-">
                         <div class="service-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1666816943035-15c29931e975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80" alt="" id="service-image">
                         </div>
@@ -105,7 +140,7 @@
                     <div class="service-title-overlay">
                         <p class="lg:text-2xl mb-3 text-sm">Augmented Reality + Social AR</p>
                     </div>
-                    <div class="relative">
+                    <div class="relative service-">
                         <div class="service-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80" alt="" id="service-image">
                         </div>
@@ -121,7 +156,7 @@
                     <div class="service-title-overlay">
                         <p class="lg:text-2xl mb-3 text-sm">Smart Contract  Development</p>
                     </div>
-                    <div class="relative">
+                    <div class="relative service-">
                         <div class="service-image-wrapper">
                             <img src="https://images.unsplash.com/photo-1673427147403-9e87c4fe8a26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1228&q=80" alt="" id="service-image">
                         </div>
@@ -136,7 +171,7 @@
             </div>
         </section>
 
-        <section class="section-process relative">
+        <section class="section-process relative" id="about">
             <div class="process-roadmap-wrapper relative flex flex-col items-center p-10">
                 <div class="roadmap-title">
                     <p class="uppercase lg:text-3xl">ENJOY OUR PROCESS</p>
@@ -224,61 +259,90 @@
                     <p class="section-title">OUR PEOPLE</p>
                     <p class="text-4xl my-5">AT THE FOREFRONT OF VIRTUAL EXPERIENCE TECH</p>
                     <a href="/">
-                        <button class="join-team-btn border px-10 py-3 border-black/[0.4]">Join Our Team</button>
+                        <button class="join-team-btn slide-button light border px-10 py-3 border-black/[0.4]">Join Our Team</button>
                     </a>
                 </div>
 
-                <div class="team-members-wrapper my-10 grid lg:grid-cols-6 grid-cols-2 gap-5">
-                    <div class="member-card card-lg relative col-span-2">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                <div class="team-members-wrapper relative my-10 grid lg:grid-cols-6 grid-cols-2 gap-5">
+                    <div data-content="SHRYASH"  class="member-card card-lg relative col-span-2">
+                        <div class="team-member-dets">
+                            <p class="bg-white w-full px-5 py-2">Test Name</p>
+                        </div>
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-lg relative col-span-2">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="Apurv"  class="member-card card-lg relative col-span-2">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-lg relative col-span-2">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="SHRYASH"  class="member-card card-lg relative col-span-2">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-sm relative">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="SHRYASH"  class="member-card card-sm relative">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-sm relative">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="SHRYASH"  class="member-card card-sm relative">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-sm relative">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="SHRYASH"  class="member-card card-sm relative">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-sm relative">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="SHRYASH"  class="member-card card-sm relative">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-sm relative">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div data-content="SHRYASH"  class="member-card card-sm relative">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
                     </div>
-                    <div class="member-card card-sm relative">
-                        <div class="card-overlay z-10 bg-white">Hey</div>
+                    <div  data-content="SHRYASH" class="member-card card-sm relative">
+                        
+                        <div class="card-overlay">
+                            <p class="text-xl p-10">Founder At Imersive</p>
+                        </div>
                         <div class="member-image-wrapper relative overflow-hidden rounded-lg">
                             <img src="./assets/nft.jpg" alt="">
                         </div>
@@ -287,7 +351,7 @@
             </div>
         </section>
 
-        <footer class="flex flex-col -z-10 border border-t">
+        <footer class="flex flex-col -z-10 border border-t" id="#footer">
             <div class="footer-cta flex-1">
                 <h2 class="lg:text-8xl text-3xl mb-5">Ready to work with us?</h2>
                 <p class="lg:text-2xl text-xl">hello@imersive.co</p>
