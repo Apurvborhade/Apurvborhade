@@ -58,5 +58,5 @@ I'm a Front end Web Developer 💻, Artist 🎨, and Gamer !
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Apurvborhade&layout=compact)](https://github.com/Apurvborhade)
 
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=Apurvborhade.Apurvborhade)]
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=Apurvborhade.Apurvborhade)
 
