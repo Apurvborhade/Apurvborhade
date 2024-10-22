@@ -50,7 +50,7 @@ I'm a Front end Web Developer 💻, Artist 🎨, and Gamer !
 ![](https://img.shields.io/badge/Tools-Git-informational?style=flat&logo=Git&color=F05032)
 ![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
 
-
+[![An image of @apurvborhade's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/apurvborhade)](https://holopin.io/@apurvborhade)
 
 ## 📈 GitHub Stats 
 
