@@ -18,13 +18,9 @@ I'm a Full stack Developer 💻, Artist 🎨, and Gamer !
 
 - 💬 If you have any question/feedback, please do not hesitate to reach out to me!
 
-## 🔭 I'm currently working on
-
-- A complete E-commerce Website
-
 ## 🌱 I'm currently learning
 
-- Flutter
+- 
 
 ## 💼 Technical Skills
 
