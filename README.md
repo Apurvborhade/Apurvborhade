@@ -5,7 +5,7 @@ Hi there, I'm <a href="" target="_blank" rel="noreferrer">Apurv</a> 👋
 </h3>
 
 <h2 align="center">
-I'm a Front end Web Developer 💻, Artist 🎨, and Gamer !
+I'm a Full stack Developer 💻, Artist 🎨, and Gamer !
 </h2> 
 
 ### 🤝 Connect with me:
