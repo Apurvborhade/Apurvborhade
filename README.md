@@ -18,10 +18,6 @@ I'm a Full stack Developer 💻, Artist 🎨, and Gamer !
 
 - 💬 If you have any question/feedback, please do not hesitate to reach out to me!
 
-## 🌱 I'm currently learning
-
-- 
-
 ## 💼 Technical Skills
 
 ![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&color=61DAFB)
@@ -46,11 +42,11 @@ I'm a Full stack Developer 💻, Artist 🎨, and Gamer !
 ![](https://img.shields.io/badge/Tools-Git-informational?style=flat&logo=Git&color=F05032)
 ![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
 
-[![An image of @apurvborhade's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/apurvborhade)](https://holopin.io/@apurvborhade)
+
 
 ## 📈 GitHub Stats 
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Apurvborhade)](https://github.com/Apurvborhade)
+[![Apurva's github stats](https://github-readme-stats.vercel.app/api?username=Apurvborhade)](https://github.com/Apurvborhade)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Apurvborhade&layout=compact)](https://github.com/Apurvborhade)
 
