@@ -11,7 +11,7 @@ I'm a Full stack Developer 💻, Artist 🎨, and Gamer !
 ### 🤝 Connect with me:
 
 
-<a align="start" style="margin-left:20px" href="https://instagram.com/apurvagen"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
+<a align="start" style="margin-left:20px" href="https://instagram.com/apurva_borhade_"><img align="left" src="https://raw.githubusercontent.com/yushi1007/yushi1007/main/images/instagram.svg" alt="Yu Shi | Instagram" width="21px"/></a>
 
 </br>
 </br>
